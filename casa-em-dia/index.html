@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a4731">
+  <meta name="description" content="Casa em Dia: organize a manutenção da sua casa, receba lembretes e registre serviços. Grátis para Android.">
+  <meta property="og:title" content="Casa em Dia — Sua casa bem cuidada, sempre.">
+  <meta property="og:description" content="Planeje manutenções, receba lembretes e organize o histórico dos cuidados com sua casa.">
+  <meta property="og:type" content="website">
+  <title>Casa em Dia — Baixe grátis no Android</title>
+  <link rel="icon" type="image/png" href="icone.png">
+  <style>
+    :root{color-scheme:light;--green:#0a4731;--green2:#147c52;--mint:#e5f3e9;--ink:#153327;--cream:#f8f7ee;--gray:#5c6b62}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:radial-gradient(circle at 100% 12%,#d0efca 0,transparent 32%),radial-gradient(circle at 0% 100%,#e2f2dc 0,transparent 28%),var(--cream);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);}
+    .wrap{max-width:1080px;margin:auto;padding:25px 22px 44px}
+    header{display:flex;align-items:center;gap:12px}
+    header img{width:53px;height:53px;object-fit:cover;border-radius:15px;box-shadow:0 5px 12px #0a473121}
+    .brand{font-size:23px;font-weight:850;letter-spacing:-.7px}
+    .tag{font-size:12px;color:var(--gray)}
+    main{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;padding:45px 5px 5px}
+    .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--green2);text-transform:uppercase}
+    h1{font-size:clamp(38px,4.4vw,64px);letter-spacing:-.055em;line-height:1.06;margin:15px 0 20px;color:var(--green)}
+    .sub{font-size:clamp(16px,2vw,20px);line-height:1.5;color:#44584e;max-width:590px}
+    .benefits{display:flex;flex-wrap:wrap;gap:10px;margin:25px 0 29px}
+    .benefits span{border:1px solid #cadecb;background:#ffffffa8;border-radius:40px;padding:10px 13px;font-size:13px;font-weight:650}
+    .cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:390px;background:var(--green2);color:white;text-decoration:none;padding:19px 21px;border-radius:16px;font-weight:800;font-size:17px;box-shadow:0 12px 24px #12683e30;transition:background .15s,transform .15s}
+    .cta:hover{background:var(--green);transform:translateY(-1px)}
+    .secondary{background:transparent;border:1px solid #b1c9b5;color:var(--green);padding:12px 16px;border-radius:12px;font-weight:700;font:inherit;cursor:pointer;margin-top:13px}
+    .copyhelp{color:var(--gray);font-size:13px;line-height:1.45;margin-top:14px;max-width:430px}
+    .fallback{margin-top:12px;padding:12px 14px;border-radius:12px;background:#ffffffbf;border:1px solid #e0e9dd;max-width:470px;display:none}
+    .fallback.show{display:block}
+    .fallback p{margin:0 0 8px;font-size:13px;color:#334e3d}
+    .fallback code{word-break:break-all;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;user-select:all}
+    .visual{display:flex;justify-content:center;position:relative}
+    .halo{position:absolute;z-index:0;inset:10% 4% 0 4%;background:linear-gradient(145deg,#d1edcc,#a0d6ac);border-radius:52% 48% 48% 52%/42% 52% 48% 58%;transform:rotate(-9deg)}
+    .phone{z-index:1;position:relative;max-width:295px;width:76%;background:#152a24;padding:9px;border-radius:34px;box-shadow:0 24px 53px #0b3d2f3a,0 6px 12px #0b3d2f18;border:2px solid #556f5b;transform:rotate(3deg)}
+    .phone img{display:block;width:100%;height:auto;border-radius:25px 25px 14px 14px}
+    .phone:before{content:"";position:absolute;z-index:2;top:15px;left:50%;transform:translateX(-50%);border-radius:50%;width:8px;height:8px;background:#101c18;border:2px solid #44594b}
+    footer{text-align:center;padding:28px 0 0;color:#667b70;font-size:12px}
+    a:focus-visible,button:focus-visible{outline:3px solid #5bcc88;outline-offset:3px}
+    @media(max-width:760px){.wrap{padding:19px 20px 35px}main{grid-template-columns:1fr;gap:34px;padding:36px 0 0}h1{font-size:clamp(37px,9vw,53px);margin:12px 0 13px}.sub{font-size:16px}.benefits{margin:20px 0 26px;gap:8px}.benefits span{font-size:12px;padding:8px 11px}.cta{max-width:none}.visual{margin:0 auto 0;width:100%;max-width:390px}.phone{max-width:240px;width:66%}.halo{inset:14% 9% 0}.brand{font-size:21px}}
+    @media(prefers-reduced-motion:reduce){.cta{transition:none}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+<header><img src="icone.png" width="53" height="53" alt="Ícone do Casa em Dia"><div><div class="brand">Casa em Dia</div><div class="tag">Sua casa bem cuidada, sempre.</div></div></header>
+<main>
+  <section aria-labelledby="headline">
+    <div class="eyebrow">Aplicativo gratuito para Android</div>
+    <h1 id="headline">Cuide da sua casa sem depender da memória.</h1>
+    <p class="sub">Planeje as manutenções da sua casa, receba lembretes e mantenha um histórico dos serviços realizados — tudo em um só lugar.</p>
+    <div class="benefits"><span>📅 Planeje manutenções</span><span>🔔 Receba lembretes</span><span>✅ Registre os cuidados</span></div>
+    <a id="download" class="cta" href="https://play.google.com/store/apps/details?id=com.ofeeh.casaemdia" target="_blank" rel="noopener noreferrer" aria-label="Abrir Casa em Dia na Google Play">▶ Baixar grátis na Google Play</a>
+    <div><button class="secondary" id="copy" type="button">Copiar link de instalação</button></div>
+    <p class="copyhelp">O botão não abriu? Copie o link e cole no Chrome. No Instagram, você também pode tocar em <strong>⋯ → Abrir no navegador externo</strong>, se a opção aparecer.</p>
+    <div id="fallback" class="fallback" role="status" aria-live="polite"><p id="feedback">Link de instalação:</p><code id="url">https://play.google.com/store/apps/details?id=com.ofeeh.casaemdia</code></div>
+  </section>
+  <div class="visual" aria-label="Prévia real da tela inicial do Casa em Dia"><div class="halo"></div><div class="phone"><img src="tela-inicio.webp" width="315" height="510" alt="Tela inicial do Casa em Dia mostrando Saúde da Casa, manutenção atrasada e próximas manutenções"></div></div>
+</main>
+<footer>Casa em Dia · Disponível para Android · Gratuito com anúncios</footer>
+</div>
+<script>
+(()=>{const link='https://play.google.com/store/apps/details?id=com.ofeeh.casaemdia';const button=document.getElementById('copy');const fallback=document.getElementById('fallback');const feedback=document.getElementById('feedback');button.addEventListener('click',async()=>{fallback.classList.add('show');try{await navigator.clipboard.writeText(link);feedback.textContent='Link copiado! Cole no Chrome ou compartilhe com alguém.';button.textContent='✓ Link copiado';}catch(e){feedback.textContent='Selecione e copie o endereço abaixo para abrir no Chrome:';button.textContent='Selecionar link abaixo';}})})();
+</script>
+</body></html>
