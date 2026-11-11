@@ -14,7 +14,7 @@ apps-landing-pages/
 │   └── tela-inicio.webp       # Screenshot real
 └── README.md
 ```
-
+ 
 ## Publicação no GitHub Pages
 
 1. Crie um repositório **público** chamado `apps-landing-pages` no usuário `FeeSantana`, com `README` inicial para criar a branch `main`.
