@@ -12,11 +12,13 @@
 <script>
 (function(){'use strict';
 const measurement='G-9YJ14Y8EMQ',key='assinafacil_web_analytics_consent_v1',storeUrl='https://play.google.com/store/apps/details?id=com.ofeeh.assinafacil';
+// DebugView manual: somente quando solicitado na URL. O consentimento continua obrigatório.
+const debugMode=new URLSearchParams(window.location.search).get('analytics_debug')==='1';
 const banner=document.getElementById('consent-banner'),settings=document.getElementById('privacy-settings');
 let consent=null,loaded=false;
 try{consent=localStorage.getItem(key)}catch(e){}
-function track(name,params){if(consent==='yes'&&loaded&&typeof window.gtag==='function')window.gtag('event',name,params||{});}
-function enable(){if(loaded)return;loaded=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',measurement,{send_page_view:true});const s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(measurement);document.head.appendChild(s);}
+function track(name,params){if(consent==='yes'&&loaded&&typeof window.gtag==='function')window.gtag('event',name,{...(params||{}),...(debugMode?{debug_mode:true}:{})});}
+function enable(){if(loaded)return;loaded=true;window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',measurement,{send_page_view:true,...(debugMode?{debug_mode:true}:{})});const s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(measurement);document.head.appendChild(s);}
 if(consent==='yes')enable();else if(consent!=='no')banner.hidden=false;
 function decide(value){try{localStorage.setItem(key,value)}catch(e){}consent=value;banner.hidden=true;if(value==='yes')enable();else window.location.reload();}
 document.getElementById('consent-yes').addEventListener('click',()=>decide('yes'));document.getElementById('consent-no').addEventListener('click',()=>decide('no'));settings.addEventListener('click',()=>{banner.hidden=false;document.getElementById('consent-no').focus()});
